@@ -1,0 +1,488 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @media screen and (max-width:1023px) {
+            body {
+                font-size: 25px;
+                background-image: url(../media/fondo.png);
+                font-family: 'Montserrat', sans-serif;
+            }
+            /* index inicio*/
+            .struct {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "nav galeria" "nav ofertas" "footer footer";
+                gap: 10px;
+            }
+            header {
+                grid-area: nav;
+                height: 400px;
+            }
+            /* barra nav */
+            .menu {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                height: 320px;
+                position: sticky;
+                top: 5px;
+            }
+            .menu__ul {
+                display: block;
+                width: 100%;
+                list-style-type: none;
+            }
+            .menu__li {
+                padding: 0.6em;
+                border-bottom: 3px solid;
+                border-radius: 4px;
+                text-align: center;
+                display: block;
+                margin: 0.5em;
+                font-size: 1em;
+                box-shadow: 0 10px 10px 0 rgb(0 0 0 / 14%), 0 10px 10px -2px rgb(0 0 0 / 20%), 0 10px 8px 0 rgb(0 0 0 / 12%);
+            }
+            /* logo inicio */
+            .menu__a {
+                text-decoration: none;
+                color: #000ecc;
+                font-family: 'Bakbak One', cursive;
+            }
+            .logo__h2 {
+                display: inline-block;
+                font-size: 1.5em;
+                border: 2px solid black;
+                padding: 5px;
+                color: #00ffff;
+                text-shadow: 0 2px 2px rgb(5, 5, 107), 0 0 1px #000, 0 0 0.1em rgb(60, 60, 100);
+                font-family: 'Bakbak One', cursive;
+            }
+            .logo__h1 {
+                display: inline-block;
+                border-left: 2px solid #000;
+                font-size: 1.5em;
+                font-family: 'Bakbak One', cursive;
+            }
+            /* imagenes */
+            .sectionGaleria {
+                grid-area: galeria;
+            }
+            .galeria {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .title__h2 {
+                font-size: 1em;
+                text-align: center;
+                padding: 0.3em;
+                color: #7f84cc;
+                border-bottom: solid black 1px;
+                border-radius: 5px;
+                box-shadow: 0 10px 10px 0 rgb(0 0 0 / 14%), 0 10px 10px -2px rgb(0 0 0 / 20%), 0 10px 8px 0 rgb(0 0 0 / 12%);
+                margin: 3em 10px;
+                font-family: 'Bakbak One', cursive;
+            }
+            .galeria__div {
+                margin: 10px;
+                box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+                transition: all 1s ease;
+                border-radius: 5px;
+            }
+            .galeria__div:hover {
+                transform: scale(1.1);
+                box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%), 0 7px 4px -6px rgb(0 0 0 / 24%), 0 4px 9px 0 rgb(0 0 0 / 14%);
+                color: blue;
+            }
+            .galeria__img {
+                width: 6em;
+                height: 6em;
+            }
+            .galeria__ul {
+                padding: 5px;
+                list-style-type: none;
+            }
+            .galeria__li {
+                font-size: 0.5em;
+                border-top: #000 solid 2px;
+            }
+            /* ofertas */
+            .sectionOfertas {
+                grid-area: ofertas;
+            }
+            .ofertas {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .ofertas__h2 {
+                font-size: 1em;
+                text-align: center;
+                border: 3px #000 solid;
+                padding: 0.3em;
+                margin: 1em;
+                font-family: 'Bakbak One', cursive;
+            }
+            /* Footer */
+            .footer {
+                grid-area: footer;
+            }
+            .pdg {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                justify-content: space-around;
+                border-top: 2px solid black;
+                border-bottom: 2px solid black;
+                padding: 12px;
+            }
+            /* Logo PDG */
+            .logoPie__ul {
+                list-style-type: none;
+            }
+            .logoPie__a {
+                text-decoration: none;
+            }
+            .logoPie__h2 {
+                display: inline-block;
+                font-size: 1em;
+                border: 2px solid black;
+                padding: 5px;
+                color: #00ffff;
+                text-shadow: 0 2px 2px rgb(5, 5, 107), 0 0 1px #000, 0 0 0.1em rgb(60, 60, 100);
+                font-family: 'Bakbak One', cursive;
+            }
+            .logoPie__h2--color {
+                display: inline-block;
+                border-left: 2px solid black;
+                font-size: 1em;
+                color: #000ecc;
+                font-family: 'Bakbak One', cursive;
+            }
+            /* end logo */
+            .pdg__images {
+                width: 0.8em;
+            }
+            .pdg__li {
+                list-style-type: none;
+                display: inline-block;
+            }
+            .pdg__h3 {
+                font-size: 1em;
+                color: #000ecc;
+                font-family: 'Bakbak One', cursive;
+            }
+            /* pag contacto */
+            .formulario {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 10px 0;
+                width: 100%;
+                border-radius: 2px;
+                padding: 10px;
+            }
+            .tam--area {
+                height: 150px;
+                line-height: 150%;
+                resize: vertical;
+            }
+            .formulario__input {
+                color: white;
+                font-family: Helvetica, Arial, sans-serif;
+                font-weight: 500;
+                font-size: 18px;
+                border-radius: 5px;
+                line-height: 22px;
+                background-color: transparent;
+                border: 2px solid #000ecc;
+                transition: all 0.3s;
+                padding: 13px;
+                width: 100%;
+                box-sizing: border-box;
+                outline: 0;
+                box-shadow: 0 10px 10px 0 rgb(0 0 0 / 14%), 0 10px 10px -2px rgb(0 0 0 / 20%), 0 10px 8px 0 rgb(0 0 0 / 12%);
+                margin: 0.5em;
+                transition: 2s all ease;
+            }
+            .formulario__input:hover {
+                transform: scale(1.01);
+                box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%), 0 7px 4px -6px rgb(0 0 0 / 24%), 0 4px 9px 0 rgb(0 0 0 / 14%);
+                border: solid 2px #000654;
+            }
+            .boton {
+                background-color: #000ecc;
+                border: 2px solid #000;
+                color: #fff;
+                height: 50px;
+                margin: 0.5em;
+                transition: 0.5s ease all;
+            }
+            .boton:hover {
+                background-color: #000654;
+                transform: scale(1.01);
+                border: #fff solid 2px;
+                box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%), 0 7px 4px -6px rgb(0 0 0 / 24%), 0 4px 9px 0 rgb(0 0 0 / 14%);
+                border: solid 2px #000654;
+            }
+            .map-l {
+                width: 100vw;
+                padding: 10px;
+            }
+            .map {
+                border: 2px solid #000;
+            }
+        }
+        /*-------------------------------- Desktop------------------------ */
+        
+        @media screen and (min-width:1024px) {
+            body {
+                font-size: 25px;
+                background-image: url(../media/fondo.png);
+            }
+            /* index inicio*/
+            .struct {
+                display: grid;
+                grid-template-areas: "nav nav" "galeria galeria" "ofertas ofertas" "footer footer";
+            }
+            header {
+                grid-area: nav;
+            }
+            /* barra nav */
+            .menu {
+                position: sticky;
+                top: 5px;
+                z-index: 10;
+            }
+            .menu__ul {
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                margin: 2em;
+            }
+            .menu__li {
+                padding: 0.6em;
+                border-radius: 4px;
+                text-align: center;
+                margin: 0.5em;
+                font-size: 1em;
+                box-shadow: 2px 10px 10px 0 rgb(0 0 0 / 14%), 2px 10px 10px -2px rgb(0 0 0 / 20%), 0 10px 8px 0 rgb(0 0 0 / 12%);
+                transition: all ease 0.5s;
+            }
+            .menu__a {
+                text-decoration: none;
+                color: #000ecc;
+                transition: all 0.5s ease;
+                font-family: 'Bakbak One', cursive;
+            }
+            .menu__li:hover {
+                transform: scale(1.1);
+                box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%), 0 7px 4px -6px rgb(0 0 0 / 24%), 0 4px 9px 0 rgb(0 0 0 / 14%);
+                color: #000654;
+                border: #00ffff;
+            }
+            .menu__a:hover {
+                color: #000654;
+                border: #00ffff;
+            }
+            /* LOGO */
+            .logo__h2 {
+                display: inline-block;
+                font-size: 1.5em;
+                border: 2px solid black;
+                padding: 5px;
+                color: #00ffff;
+                text-shadow: 0 2px 2px rgb(5, 5, 107), 0 0 1px #000, 0 0 0.1em rgb(60, 60, 100);
+                font-family: 'Bakbak One', cursive;
+            }
+            .logo__h1 {
+                display: inline-block;
+                border-left: 2px solid #000;
+                font-size: 1.5em;
+                font-family: 'Bakbak One', cursive;
+            }
+            /* imagenes */
+            .sectionGaleria {
+                grid-area: galeria;
+            }
+            .galeria {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .title__h2 {
+                font-size: 1em;
+                text-align: center;
+                padding: 0.3em;
+                width: 100vw;
+                color: #7f84cc;
+                border-bottom: solid black 1px;
+                border-radius: 5px;
+                box-shadow: 0 10px 10px 0 rgb(0 0 0 / 14%), 0 10px 10px -2px rgb(0 0 0 / 20%), 0 10px 8px 0 rgb(0 0 0 / 12%);
+                margin: 3em 10px;
+                font-family: 'Bakbak One', cursive;
+            }
+            .galeria__div {
+                margin: 10px;
+                box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+                transition: all 1s ease;
+                border-radius: 5px;
+            }
+            .galeria__div:hover {
+                transform: scale(1.1);
+                box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%), 0 7px 4px -6px rgb(0 0 0 / 24%), 0 4px 9px 0 rgb(0 0 0 / 14%);
+                color: blue;
+            }
+            .galeria__img {
+                width: 6em;
+                height: 6em;
+            }
+            .galeria__ul {
+                padding: 5px;
+                list-style-type: none;
+            }
+            .galeria__li {
+                font-size: 0.5em;
+                border-top: #000 solid 2px;
+            }
+            /* ofertas */
+            .sectionOfertas {
+                grid-area: ofertas;
+            }
+            .ofertas {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .ofertas__h2 {
+                font-size: 1em;
+                text-align: center;
+                border: 3px #000 solid;
+                padding: 0.3em;
+                margin: 1em;
+                font-family: 'Bakbak One', cursive;
+            }
+            /* Footer */
+            .footer {
+                grid-area: footer;
+            }
+            .pdg {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                justify-content: space-around;
+                border-top: 2px solid black;
+                border-bottom: 2px solid black;
+                padding: 12px;
+            }
+            /* Logo PDG */
+            .logoPie__ul {
+                list-style-type: none;
+            }
+            .logoPie__a {
+                text-decoration: none;
+            }
+            .logoPie__h2 {
+                display: inline-block;
+                font-size: 1em;
+                border: 2px solid black;
+                padding: 5px;
+                color: #00ffff;
+                text-shadow: 0 2px 2px rgb(5, 5, 107), 0 0 1px #000, 0 0 0.1em rgb(60, 60, 100);
+                font-family: 'Bakbak One', cursive;
+            }
+            .logoPie__h2--color {
+                display: inline-block;
+                border-left: 2px solid black;
+                font-size: 1em;
+                color: #000ecc;
+                font-family: 'Bakbak One', cursive;
+            }
+            /* end logo */
+            .pdg__images {
+                width: 0.8em;
+            }
+            .pdg__li {
+                list-style-type: none;
+                display: inline-block;
+            }
+            .pdg__h3 {
+                font-size: 1em;
+                color: #000ecc;
+                font-family: 'Bakbak One', cursive;
+            }
+            /* pag contacto */
+            .formulario {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 10px 0;
+                width: 100%;
+                border-radius: 2px;
+                padding: 10px;
+            }
+            .tam--area {
+                height: 150px;
+                line-height: 150%;
+                resize: vertical;
+            }
+            .formulario__input {
+                color: white;
+                font-family: Helvetica, Arial, sans-serif;
+                font-weight: 500;
+                font-size: 18px;
+                border-radius: 5px;
+                line-height: 22px;
+                background-color: transparent;
+                border: 2px solid #000ecc;
+                transition: all 0.3s;
+                padding: 13px;
+                width: 100%;
+                box-sizing: border-box;
+                outline: 0;
+                box-shadow: 0 10px 10px 0 rgb(0 0 0 / 14%), 0 10px 10px -2px rgb(0 0 0 / 20%), 0 10px 8px 0 rgb(0 0 0 / 12%);
+                margin: 0.5em;
+                transition: 2s all ease;
+            }
+            .formulario__input:hover {
+                transform: scale(1.01);
+                box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%), 0 7px 4px -6px rgb(0 0 0 / 24%), 0 4px 9px 0 rgb(0 0 0 / 14%);
+                border: solid 2px #000654;
+            }
+            .boton {
+                background-color: #000ecc;
+                border: 2px solid #000;
+                color: #fff;
+                height: 50px;
+                margin: 0.5em;
+                transition: 0.5s ease all;
+            }
+            .boton:hover {
+                background-color: #000654;
+                transform: scale(1.01);
+                border: #fff solid 2px;
+                box-shadow: 0 6px 6px 0 rgb(0 0 0 / 16%), 0 7px 4px -6px rgb(0 0 0 / 24%), 0 4px 9px 0 rgb(0 0 0 / 14%);
+                border: solid 2px #000654;
+            }
+            .map-l {
+                width: 100vw;
+                padding: 10px;
+            }
+            .map {
+                border: 2px solid #000;
+            }
+        }

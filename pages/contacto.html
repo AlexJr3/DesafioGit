@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://raw.github.com/daneden/animate.css/master/animate.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>TechnoShop</title>
 </head>
@@ -47,18 +49,18 @@
                 Contacto
             </h2>
             <form class="formulario">
-                <input type="text" name="f-name" placeholder="First Name" class="formulario__input tam">
-                <input type="text" name="l-name" placeholder="Last Name" class="formulario__input tam">
-                <input type="email" name="email" placeholder="email" class="formulario__input tam">
-                <input type="tel" name="cell" placeholder="+541189745218" class="formulario__input tam">
-                <textarea name="comentario" id="" cols="30" rows="10" placeholder="Cuentanos tu consulta." class="formulario__input tam--area"></textarea>
-                <input type="submit" name="" id="Enviar" class="boton">
+                <input type="text" name="f-name" placeholder="First Name" class="formulario__input tam wow animate__animated animate__backInDown">
+                <input type="text" name="l-name" placeholder="Last Name" class="formulario__input tam wow animate__animated animate__backInDown">
+                <input type="email" name="email" placeholder="email" class="formulario__input tam wow animate__animated animate__backInDown">
+                <input type="tel" name="cell" placeholder="+541189745218" class="formulario__input tam wow animate__animated animate__backInDown">
+                <textarea name="comentario" id="" cols="30" rows="10" placeholder="Cuentanos tu consulta." class="formulario__input tam--area wow animate__animated animate__backInDown"></textarea>
+                <input type="submit" name="" id="Enviar" class="boton wow animate__animated animate__backInDown">
 
             </form>
 
 
         </main>
-        <footer class="footer">
+        <footer class="footer wow animate__animated animate__backInUp">
             <div class=" pdg ">
                 <div class="logoPie ">
                     <ul class="logoPie__ul ">
@@ -86,6 +88,10 @@
             </div>
         </footer>
     </div>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>
